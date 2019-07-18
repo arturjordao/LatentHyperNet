@@ -8,6 +8,7 @@ In deep convolutional networks, discriminative and complementary data representa
 This occurs due to successive convolution and pooling operations, which can overlap discriminative features.
 The figure below illustrates this behavior, where the attention maps (important regions in the image to predict the class label) 
 present strong activations in early layers of the network. The idea behind HyperNets is to combine low-level information (shallow layers) with refined information (deep layers), focusing on achieving a better data representation.
+
 ![Figure1](/Figures/a.png)
 
 ## Requirements
@@ -17,8 +18,7 @@ present strong activations in early layers of the network. The idea behind Hyper
 - [Python 3](https://www.python.org/)
 
 ## Quick Start
-[main.py](main.py) provides an example of our Latent HyperNet (LHN). In this example, we combine layers from a pre-trained ResNet20, which obtain an accuracy of 89.68.
-We highlight that the ResNet20 accuracy is not considering data augmentation.
+[main.py](main.py) provides an example of our Latent HyperNet (LHN). In this example, we combine layers from a pre-trained ResNet20, which obtain an accuracy of 89.68. We highlight that ResNet20 accuracy is not considering data augmentation.
 
 In this example, for fast training, we consider only 10% of the training data to learn PLS. Better results can be obtained by using more data.
 
@@ -32,7 +32,7 @@ Our method takes two parameters:
 
 ### Results
 The [figures](/Figures/b.png) below show the improvements (difference between the accuracy of the convolutional networks using
-our LHN and the one without using LHN) achieved by our LHN. In addition, the figures show the comparison between our LHN and an existing [HyperNet](https://zpascal.net/cvpr2016/Kong_HyperNet_Towards_Accurate_CVPR_2016_paper.pdf)
+our LHN and the one without using LHN) achieved by our LHN. In addition, the [figures](/Figures/b.png) show the comparison between our LHN and an existing [HyperNet](https://zpascal.net/cvpr2016/Kong_HyperNet_Towards_Accurate_CVPR_2016_paper.pdf)
 .
 ![Figure2](/Figures/b.png)
 
